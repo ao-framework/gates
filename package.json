@@ -1,0 +1,37 @@
+{
+  "name": "@ao-framework/gates",
+  "version": "0.0.0",
+  "description": "Conditional logic",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "ao-acumen main",
+    "test:dev": "ao-acumen dev",
+    "dev": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ao-framework/gates.git"
+  },
+  "keywords": [
+    "conditional",
+    "logic"
+  ],
+  "author": "Josh Miller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ao-framework/gates/issues"
+  },
+  "homepage": "https://github.com/ao-framework/gates#readme",
+  "devDependencies": {
+    "@ao-framework/acumen": "^0.0.3",
+    "@types/node": "^13.1.2",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
