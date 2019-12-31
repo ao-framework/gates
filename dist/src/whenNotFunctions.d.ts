@@ -1,0 +1,14 @@
+import { iWhenArgumentFunction } from "./contracts/iWhenArgumentFunction";
+export declare function whenNotObjectLike<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotObject<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotString<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotStringWithLength<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotFunction<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotBoolean<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotNumber<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotArray<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotUndefined<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotNull<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotNill<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotBigInt<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;
+export declare function whenNotSymbol<Context>(variable: Context): (handler: iWhenArgumentFunction<Context>) => void;

@@ -1,0 +1,11 @@
+export declare function returnObjectLikeOrNothing<Context>(variable: Context): Context;
+export declare function returnObjectOrNothing<Context>(variable: Context): Context;
+export declare function returnStringOrNothing(variable: any): string;
+export declare function returnStringWithLengthOrNothing(variable: any): string;
+export declare function returnFunctionOrNothing<Context>(variable: Context): Context;
+export declare function returnBooleanOrNothing(variable: any): boolean;
+export declare function returnNumberOrNothing(variable: any): number;
+export declare function returnArrayOrNothing<Context>(variable: Context): Context;
+export declare function returnNullOrNothing(variable: any): null;
+export declare function returnBigIntOrNothing(variable: any): bigint;
+export declare function returnSymbolOrNothing<Context>(variable: Context): Context;

@@ -1,0 +1,14 @@
+export declare function throwWhenNotObjectLike<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotObject<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotString<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotStringWithLength<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotFunction<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotBoolean<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotNumber<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotArray<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotUndefined<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotNull<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotNill<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotBigInt<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenNotSymbol<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
+export declare function throwWhenFalse<Context>(variable: Context, message: string, errorConstructor?: ErrorConstructor): Context;
