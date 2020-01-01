@@ -1,7 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const isNotFunctions_1 = require("./isNotFunctions");
 const ensureFunctions_1 = require("./ensureFunctions");
+const isNotFunctions_1 = require("./isNotFunctions");
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not object like, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotObjectLike(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotObjectLike(variable)) {
@@ -10,6 +17,13 @@ function whenNotObjectLike(variable) {
     };
 }
 exports.whenNotObjectLike = whenNotObjectLike;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not an object, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotObject(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotObject(variable)) {
@@ -18,6 +32,13 @@ function whenNotObject(variable) {
     };
 }
 exports.whenNotObject = whenNotObject;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not a string, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotString(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotString(variable)) {
@@ -26,6 +47,13 @@ function whenNotString(variable) {
     };
 }
 exports.whenNotString = whenNotString;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not a string with length, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotStringWithLength(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotString(variable)) {
@@ -34,6 +62,13 @@ function whenNotStringWithLength(variable) {
     };
 }
 exports.whenNotStringWithLength = whenNotStringWithLength;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not a function, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotFunction(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotFunction(variable)) {
@@ -42,6 +77,13 @@ function whenNotFunction(variable) {
     };
 }
 exports.whenNotFunction = whenNotFunction;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not a boolean value, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotBoolean(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotBoolean(variable)) {
@@ -50,6 +92,13 @@ function whenNotBoolean(variable) {
     };
 }
 exports.whenNotBoolean = whenNotBoolean;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not a number, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotNumber(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotNumber(variable)) {
@@ -58,6 +107,13 @@ function whenNotNumber(variable) {
     };
 }
 exports.whenNotNumber = whenNotNumber;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not an array, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotArray(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotArray(variable)) {
@@ -66,6 +122,13 @@ function whenNotArray(variable) {
     };
 }
 exports.whenNotArray = whenNotArray;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not an undefined, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotUndefined(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotUndefined(variable)) {
@@ -74,6 +137,13 @@ function whenNotUndefined(variable) {
     };
 }
 exports.whenNotUndefined = whenNotUndefined;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not null, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotNull(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotNull(variable)) {
@@ -82,6 +152,13 @@ function whenNotNull(variable) {
     };
 }
 exports.whenNotNull = whenNotNull;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not null or undefined, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotNill(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotNill(variable)) {
@@ -90,6 +167,13 @@ function whenNotNill(variable) {
     };
 }
 exports.whenNotNill = whenNotNill;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not a big int, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotBigInt(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotBigInt(variable)) {
@@ -98,6 +182,13 @@ function whenNotBigInt(variable) {
     };
 }
 exports.whenNotBigInt = whenNotBigInt;
+/**
+ * Provide a variable of any type as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the variable passed is not a symbol, it will call the callback passing the
+ * original variable in question.
+ * @param variable
+ */
 function whenNotSymbol(variable) {
     return function (handler) {
         if (isNotFunctions_1.isNotSymbol(variable)) {
