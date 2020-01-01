@@ -5,6 +5,7 @@ module.exports = {
         main(environment) {
             acumen.conceptualize(environment)
                 .terminalEnvironment(terminal => {
+                    terminal.console.throwWhenErrorsPresent(true);
                     terminal.snapshot();
                     terminal.repo.entry("dist/test/main.js")
                 })

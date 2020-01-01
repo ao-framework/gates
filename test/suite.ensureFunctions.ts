@@ -3,6 +3,7 @@ import { Apparatus } from "@ao-framework/acumen";
 import * as gates from "../src";
 
 export class SuiteEnsureFunctions {
+
     public controller({ testAll }: Apparatus) {
         return testAll();
     }
