@@ -30,8 +30,5 @@
     "@ao-framework/acumen": "^0.0.3",
     "@types/node": "^13.1.2",
     "typescript": "^3.7.4"
-  },
-  "dependencies": {
-    "tslib": "^1.10.0"
   }
 }
