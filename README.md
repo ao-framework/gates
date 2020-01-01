@@ -2,7 +2,7 @@
     <img width="250" src="https://ao-framework.github.io/assets/readmeHeader.png">
 </p>
 <p align="center">
-    <b>Gates. It's for logic.</b>
+    <b>Gates. To streamline logic.</b>
 </p>
 <p align="center">
     <em>
