@@ -13,7 +13,7 @@
 
 ### Installation
 ```bash
-npm install --save-dev @ao-framework/gates
+npm install --save @ao-framework/gates
 ```
 
 The preparation of documentation is underway.
