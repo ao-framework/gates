@@ -31,7 +31,7 @@ function isNotString(variable) {
 exports.isNotString = isNotString;
 /**
  * Provide a variable as an argument. It will return true if the variable
- * is not a string with length
+ * is not a string with length.
  * @param variable
  */
 function isNotStringWithLength(variable) {
@@ -40,38 +40,83 @@ function isNotStringWithLength(variable) {
         true;
 }
 exports.isNotStringWithLength = isNotStringWithLength;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not a function.
+ * @param variable
+ */
 function isNotFunction(variable) {
     return !isFunctions_1.isFunction(variable);
 }
 exports.isNotFunction = isNotFunction;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not a boolean value.
+ * @param variable
+ */
 function isNotBoolean(variable) {
     return !isFunctions_1.isBoolean(variable);
 }
 exports.isNotBoolean = isNotBoolean;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not a number.
+ * @param variable
+ */
 function isNotNumber(variable) {
     return !isFunctions_1.isNumber(variable);
 }
 exports.isNotNumber = isNotNumber;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not an array.
+ * @param variable
+ */
 function isNotArray(variable) {
     return !isFunctions_1.isArray(variable);
 }
 exports.isNotArray = isNotArray;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not undefined.
+ * @param variable
+ */
 function isNotUndefined(variable) {
     return !isFunctions_1.isUndefined(variable);
 }
 exports.isNotUndefined = isNotUndefined;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not null.
+ * @param variable
+ */
 function isNotNull(variable) {
     return !isFunctions_1.isNull(variable);
 }
 exports.isNotNull = isNotNull;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not null or undefined.
+ * @param variable
+ */
 function isNotNill(variable) {
     return !isFunctions_1.isUndefined(variable) && !isFunctions_1.isNull(variable);
 }
 exports.isNotNill = isNotNill;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not a big int.
+ * @param variable
+ */
 function isNotBigInt(variable) {
     return !isFunctions_1.isBigInt(variable);
 }
 exports.isNotBigInt = isNotBigInt;
+/**
+ * Provide a variable as an argument. It will return true if the variable
+ * is not a symbol.
+ * @param variable
+ */
 function isNotSymbol(variable) {
     return !isFunctions_1.isSymbol(variable);
 }
