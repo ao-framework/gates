@@ -3,6 +3,20 @@ import { ensureFunction } from "./ensureFunctions";
 import { isArray, isBigInt, isBoolean, isFunction, isNill, isNull, isNumber, isObject, isObjectLike, isString, isStringWithLength, isSymbol, isUndefined } from "./isFunctions";
 
 /**
+ * Provide a condition as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the condition is met, it will call the callback.
+ * @param variable 
+ */
+export function when(condition: boolean) {
+    return function (handler: iWhenArgumentFunction<void>) {
+        if (condition) {
+            ensureFunction(handler)()
+        }
+    }
+}
+
+/**
  * Provide a variable of any type as an argument. It will return a function.
  * The function returned, when called, requires a callback as its first argument.
  * If the variable passed is object like, it will call the callback passing the
