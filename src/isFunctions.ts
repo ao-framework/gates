@@ -4,7 +4,7 @@
  * null, it will return false.
  * @param variable 
  */
-export function isObjectLike(variable: any) {
+export function isObjectLike(variable: any): variable is object | any[] {
     return typeof variable === "object" && !isNull(variable);
 }
 
@@ -13,7 +13,7 @@ export function isObjectLike(variable: any) {
  * is an object. If the variable is null or an array, it will return false.
  * @param variable 
  */
-export function isObject(variable: any) {
+export function isObject(variable: any): variable is object {
     return isObjectLike(variable) && Array.isArray(variable) === false;
 }
 
@@ -22,7 +22,7 @@ export function isObject(variable: any) {
  * is a string.
  * @param variable 
  */
-export function isString(variable: any) {
+export function isString(variable: any): variable is string {
     return typeof variable === "string";
 }
 
@@ -31,7 +31,7 @@ export function isString(variable: any) {
  * is a string and has any length at all.
  * @param variable 
  */
-export function isStringWithLength(variable: any) {
+export function isStringWithLength(variable: any): variable is string {
     return isString(variable) && variable.length > 0;
 }
 
@@ -40,7 +40,7 @@ export function isStringWithLength(variable: any) {
  * is a function.
  * @param variable 
  */
-export function isFunction(variable: any) {
+export function isFunction(variable: any): variable is Function {
     return typeof variable === "function"
 }
 
@@ -49,7 +49,7 @@ export function isFunction(variable: any) {
  * is a boolean value.
  * @param variable 
  */
-export function isBoolean(variable: any) {
+export function isBoolean(variable: any): variable is boolean {
     return typeof variable === "boolean";
 }
 
@@ -58,7 +58,7 @@ export function isBoolean(variable: any) {
  * is a number.
  * @param variable 
  */
-export function isNumber(variable: any) {
+export function isNumber(variable: any): variable is number {
     return typeof variable === "number";
 }
 
@@ -67,7 +67,7 @@ export function isNumber(variable: any) {
  * is an array.
  * @param variable 
  */
-export function isArray(variable: any) {
+export function isArray(variable: any): variable is any[] {
     return Array.isArray(variable)
 }
 
@@ -76,7 +76,7 @@ export function isArray(variable: any) {
  * is undefined.
  * @param variable 
  */
-export function isUndefined(variable: any) {
+export function isUndefined(variable: any): variable is undefined {
     return variable === undefined;
 }
 
@@ -85,7 +85,7 @@ export function isUndefined(variable: any) {
  * is null.
  * @param variable 
  */
-export function isNull(variable: any) {
+export function isNull(variable: any): variable is null {
     return variable === null;
 }
 
@@ -94,7 +94,7 @@ export function isNull(variable: any) {
  * is undefined or null.
  * @param variable 
  */
-export function isNill(variable: any) {
+export function isNill(variable: any): variable is null | undefined {
     return isUndefined(variable) || isNull(variable)
 }
 
@@ -103,7 +103,7 @@ export function isNill(variable: any) {
  * is a Big Integer
  * @param variable 
  */
-export function isBigInt(variable: any) {
+export function isBigInt(variable: any): variable is bigint {
     return typeof variable === "bigint";
 }
 
@@ -112,7 +112,7 @@ export function isBigInt(variable: any) {
  * is a Symbol
  * @param variable 
  */
-export function isSymbol(variable: any) {
+export function isSymbol(variable: any): variable is symbol {
     return typeof variable === "symbol";
 }
 
@@ -121,6 +121,6 @@ export function isSymbol(variable: any) {
  * is constructed from the constructor given.
  * @param variable 
  */
-export function constructedFrom(variable: any, constructor: any) {
+export function constructedFrom<Context>(variable: any, constructor: any): variable is Context {
     return variable instanceof constructor;
 }
