@@ -10,7 +10,9 @@
   "scripts": {
     "test": "ao-acumen main",
     "test:dev": "ao-acumen dev",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "preversion": "npm test",
+    "postversion": "git push --tags"
   },
   "repository": {
     "type": "git",
