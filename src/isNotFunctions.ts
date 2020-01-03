@@ -1,12 +1,14 @@
 import { isArray, isBigInt, isBoolean, isFunction, isNull, isNumber, isObject, isObjectLike, isString, isSymbol, isUndefined } from "./isFunctions";
 
+type DefinitelyNot<Context, Negation> = Context extends Negation ? never : Context;
+
 /**
  * Provide a variable as an argument. It will return true if the variable
  * is not object like, more specifically not an array or object. Null will 
  * return true.
  * @param variable 
  */
-export function isNotObjectLike(variable: any) {
+export function isNotObjectLike<Context extends any>(variable: Context): variable is DefinitelyNot<Context, any[]> & DefinitelyNot<Context, object> {
     return !isObjectLike(variable)
 }
 
@@ -15,7 +17,7 @@ export function isNotObjectLike(variable: any) {
  * is not an object. If the variable is null or an array, it will return true.
  * @param variable 
  */
-export function isNotObject(variable: any) {
+export function isNotObject<Context extends any>(variable: Context): variable is DefinitelyNot<Context, object> {
     return !isObject(variable)
 }
 
@@ -24,8 +26,8 @@ export function isNotObject(variable: any) {
  * is not a string.
  * @param variable 
  */
-export function isNotString(variable: any) {
-    return !isString(variable)
+export function isNotString<Context extends any>(variable: Context): variable is DefinitelyNot<Context, string> {
+    return isString(variable) === false;
 }
 
 /**
@@ -33,7 +35,7 @@ export function isNotString(variable: any) {
  * is not a string with length.
  * @param variable 
  */
-export function isNotStringWithLength(variable: any) {
+export function isNotStringWithLength<Context extends any>(variable: Context): variable is any {
     return isString(variable) ?
         variable.length === 0 :
         true
@@ -44,7 +46,7 @@ export function isNotStringWithLength(variable: any) {
  * is not a function.
  * @param variable 
  */
-export function isNotFunction(variable: any) {
+export function isNotFunction<Context extends any>(variable: Context): variable is DefinitelyNot<Context, Function> {
     return !isFunction(variable);
 }
 
@@ -53,7 +55,7 @@ export function isNotFunction(variable: any) {
  * is not a boolean value.
  * @param variable 
  */
-export function isNotBoolean(variable: any) {
+export function isNotBoolean<Context extends any>(variable: Context): variable is DefinitelyNot<Context, boolean> {
     return !isBoolean(variable)
 }
 
@@ -62,7 +64,7 @@ export function isNotBoolean(variable: any) {
  * is not a number.
  * @param variable 
  */
-export function isNotNumber(variable: any) {
+export function isNotNumber<Context extends any>(variable: Context): variable is DefinitelyNot<Context, number> {
     return !isNumber(variable)
 }
 
@@ -71,7 +73,7 @@ export function isNotNumber(variable: any) {
  * is not an array.
  * @param variable 
  */
-export function isNotArray(variable: any) {
+export function isNotArray<Context extends any>(variable: Context): variable is DefinitelyNot<Context, any[]> {
     return !isArray(variable)
 }
 
@@ -80,7 +82,7 @@ export function isNotArray(variable: any) {
  * is not undefined.
  * @param variable 
  */
-export function isNotUndefined(variable: any) {
+export function isNotUndefined<Context extends any>(variable: Context): variable is DefinitelyNot<Context, undefined> {
     return !isUndefined(variable)
 }
 
@@ -89,7 +91,7 @@ export function isNotUndefined(variable: any) {
  * is not null.
  * @param variable 
  */
-export function isNotNull(variable: any) {
+export function isNotNull<Context extends any>(variable: Context): variable is DefinitelyNot<Context, null> {
     return !isNull(variable);
 }
 
@@ -98,7 +100,7 @@ export function isNotNull(variable: any) {
  * is not null or undefined.
  * @param variable 
  */
-export function isNotNill(variable: any) {
+export function isNotNill<Context extends any>(variable: Context): variable is DefinitelyNot<Context, null> & DefinitelyNot<Context, undefined> {
     return !isUndefined(variable) && !isNull(variable)
 }
 
@@ -107,7 +109,7 @@ export function isNotNill(variable: any) {
  * is not a big int.
  * @param variable 
  */
-export function isNotBigInt(variable: any) {
+export function isNotBigInt<Context extends any>(variable: Context): variable is DefinitelyNot<Context, bigint> {
     return !isBigInt(variable);
 }
 
@@ -116,6 +118,6 @@ export function isNotBigInt(variable: any) {
  * is not a symbol.
  * @param variable 
  */
-export function isNotSymbol(variable: any) {
+export function isNotSymbol<Context extends any>(variable: Context): variable is DefinitelyNot<Context, symbol> {
     return !isSymbol(variable);
 }
