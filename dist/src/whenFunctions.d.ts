@@ -1,5 +1,12 @@
 import { iWhenArgumentFunction } from "./contracts/iWhenArgumentFunction";
 /**
+ * Provide a condition as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the condition is met, it will call the callback.
+ * @param variable
+ */
+export declare function when(condition: boolean): (handler: iWhenArgumentFunction<void>) => void;
+/**
  * Provide a variable of any type as an argument. It will return a function.
  * The function returned, when called, requires a callback as its first argument.
  * If the variable passed is object like, it will call the callback passing the

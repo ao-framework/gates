@@ -26,7 +26,7 @@ exports.isNotObject = isNotObject;
  * @param variable
  */
 function isNotString(variable) {
-    return !isFunctions_1.isString(variable);
+    return isFunctions_1.isString(variable) === false;
 }
 exports.isNotString = isNotString;
 /**

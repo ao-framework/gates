@@ -3,6 +3,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const ensureFunctions_1 = require("./ensureFunctions");
 const isFunctions_1 = require("./isFunctions");
 /**
+ * Provide a condition as an argument. It will return a function.
+ * The function returned, when called, requires a callback as its first argument.
+ * If the condition is met, it will call the callback.
+ * @param variable
+ */
+function when(condition) {
+    return function (handler) {
+        if (condition) {
+            ensureFunctions_1.ensureFunction(handler)();
+        }
+    };
+}
+exports.when = when;
+/**
  * Provide a variable of any type as an argument. It will return a function.
  * The function returned, when called, requires a callback as its first argument.
  * If the variable passed is object like, it will call the callback passing the
