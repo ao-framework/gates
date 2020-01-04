@@ -1,6 +1,6 @@
 {
   "name": "@ao-framework/gates",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Conditional logic",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
