@@ -258,10 +258,10 @@ function createPost(request: iPostRequest) {
         "Post title must be a string")
     
     assert(typeof request.content === "string", 
-        "Post title must be a string")
+        "Post content must be a string")
     
     assert(Array.isArray(request.tags), 
-        "Post title must be a string")
+        "Post tags must be an array")
     
     request.tags.forEach(tag => 
         assert(typeof tag === "string", 
@@ -291,7 +291,7 @@ function createPost(request: iPostRequest) {
     request.tags.forEach(tag => throwWhenNotString(tag, "Post tag must be a string"))
 
     // construction -> feeling secure
-    
+
     const post = new Post();
     post.title = cleanString(request.title)
     post.content = cleanString(request.content)
