@@ -236,10 +236,10 @@ function createPost(request: iPostRequest) {
         } else {
             throw new Error("Post tags must be an array")
         }
+        return post;
     } else {
         throw new Error("Post request data is corrupt")
     }
-    return post;
 }
 ```
 
