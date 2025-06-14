@@ -5,7 +5,7 @@ import {
   isBigInt,
   isBoolean,
   isFunction,
-  isNill,
+  isNil,
   isNull,
   isNumber,
   isObject,
@@ -14,7 +14,7 @@ import {
   isStringWithLength,
   isSymbol,
   isUndefined,
-} from './isFunctions'
+} from './isFunctions/isFunctions'
 
 /**
  * Provide a condition as an argument. It will return a function.
@@ -189,7 +189,7 @@ export function whenNull<Context>(variable: Context) {
  */
 export function whenNill<Context>(variable: Context) {
   return function (handler: iWhenArgumentFunction<Context>) {
-    if (isNill(variable)) {
+    if (isNil(variable)) {
       ensureFunction(handler)(variable)
     }
   }

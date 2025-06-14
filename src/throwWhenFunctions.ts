@@ -3,7 +3,7 @@ import {
   isBigInt,
   isBoolean,
   isFunction,
-  isNill,
+  isNil,
   isNull,
   isNumber,
   isObject,
@@ -12,7 +12,7 @@ import {
   isStringWithLength,
   isSymbol,
   isUndefined,
-} from './isFunctions'
+} from './isFunctions/isFunctions'
 
 /**
  * Provide an error message and error constructor (optional) as arguments. It will throw an exception.
@@ -215,7 +215,7 @@ export function throwWhenNill<Context>(
   message: string,
   errorConstructor: ErrorConstructor = Error
 ): Context {
-  if (isNill(variable)) {
+  if (isNil(variable)) {
     throwException(message, errorConstructor)
   }
   return variable

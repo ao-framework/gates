@@ -10,7 +10,7 @@ import {
   isString,
   isStringWithLength,
   isSymbol,
-} from './isFunctions'
+} from './isFunctions/isFunctions'
 import type { AnyFunction } from './types'
 
 /**
