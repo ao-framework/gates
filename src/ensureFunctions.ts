@@ -1,4 +1,4 @@
-import { isArray, isFunction, isObject } from './isFunctions'
+import { isArray, isFunction, isObject } from './isFunctions/isFunctions'
 
 /**
  * Provide a variable of any type, a default object, and a boolean value to specify whether to merge both

@@ -1,4 +1,4 @@
-export * from './isFunctions'
+export * from './isFunctions/isFunctions'
 export * from './isNotFunctions'
 export * from './whenFunctions'
 export * from './whenNotFunctions'

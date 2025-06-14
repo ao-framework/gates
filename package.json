@@ -10,7 +10,9 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "test:unit": "vitest --run",
+    "tdd": "vitest --ui"
   },
   "repository": {
     "type": "git",
@@ -29,12 +31,14 @@
   "devDependencies": {
     "@eslint/js": "^9.29.0",
     "@types/node": "^24.0.1",
+    "@vitest/ui": "^3.2.3",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.1",
     "globals": "^16.2.0",
     "prettier": "3.5.3",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.34.0"
+    "typescript-eslint": "^8.34.0",
+    "vitest": "^3.2.3"
   }
 }
