@@ -14,7 +14,7 @@
 ### What is Gates?
 Gates is a library with many functions to make writing logic less fatiguing and more stable. The functions are broken into five categories: 
 - Ensure Functions
-- Is Functions
+- is AnyFunctions
 - Returning Functions
 - Throwing Functions
 - When Functions
@@ -56,7 +56,7 @@ function myLibrary(options: iMyOptions) {
 - ensureFunction 
 
 
-### Is Functions
+### is AnyFunctions
 This category is used to assert that a variable is a particular type.
 ```ts
 import { isString, isNumber } from "@ao-framework/gates"
@@ -83,7 +83,7 @@ function doSomething(v: string | number) {
 - isSymbol
 - constructedFrom
 
-#### Is Functions include the negations
+#### is AnyFunctions include the negations
 - isNotObjectLike
 - isNotObject
 - isNotString

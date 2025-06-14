@@ -1,1 +1,1 @@
-export type iWhenArgumentFunction<Type> = (arg: Type) => any
+export type iWhenArgumentFunction<Type> = (arg: Type) => unknown
