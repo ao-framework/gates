@@ -1,3 +1,3 @@
-import { iWhenArgumentFunction } from "./iWhenArgumentFunction";
+import { type iWhenArgumentFunction } from './iWhenArgumentFunction'
 
-export type iWhenArgumentFunctionAny = iWhenArgumentFunction<any>
+export type iWhenArgumentFunctionAny = iWhenArgumentFunction<unknown>

@@ -4,11 +4,13 @@
   "description": "Conditional logic",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
+  "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "dev": "tsc --watch"
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,14 @@
   },
   "homepage": "https://github.com/ao-framework/gates#readme",
   "devDependencies": {
-    "@types/node": "^13.1.2",
-    "typescript": "^3.7.4"
+    "@eslint/js": "^9.29.0",
+    "@types/node": "^24.0.1",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "globals": "^16.2.0",
+    "prettier": "3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.0"
   }
 }

@@ -1,133 +1,113 @@
-import { isArray, isBigInt, isBoolean, isFunction, isNull, isNumber, isObject, isObjectLike, isString, isStringWithLength, isSymbol } from "./isFunctions";
+import {
+  isArray,
+  isBigInt,
+  isBoolean,
+  isFunction,
+  isNull,
+  isNumber,
+  isObject,
+  isObjectLike,
+  isString,
+  isStringWithLength,
+  isSymbol,
+} from './isFunctions'
+import type { AnyFunction } from './types'
 
 /**
  * Provide an variable as an argument. If the variable is an object or an array, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnObjectLikeOrNothing<Context>(variable: Context): Context {
-    if (isObjectLike(variable)) {
-        return variable
-    }
-    return void 0;
+export function returnObjectLikeOrNothing<Context>(variable: Context) {
+  if (isObjectLike(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is an object, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnObjectOrNothing<Context>(variable: Context): Context {
-    if (isObject(variable)) {
-        return variable
-    }
-    return void 0;
+export function returnObjectOrNothing<Context>(variable: Context) {
+  if (isObject(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is a string, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnStringOrNothing(variable: any): string {
-    if (isString(variable)) {
-        return variable;
-    }
-    return void 0;
+export function returnStringOrNothing(variable: unknown) {
+  if (isString(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is a string with length, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnStringWithLengthOrNothing(variable: any): string {
-    if (isStringWithLength(variable)) {
-        return variable
-    }
-    return void 0;
+export function returnStringWithLengthOrNothing(variable: unknown) {
+  if (isStringWithLength(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is a function, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnFunctionOrNothing<Context>(variable: Context): Context {
-    if (isFunction(variable)) {
-        return variable;
-    }
-    return void 0
+export function returnFunctionOrNothing<Context extends AnyFunction>(variable: Context): Context | void {
+  if (isFunction(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is a boolean value, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnBooleanOrNothing(variable: any): boolean {
-    if (isBoolean(variable)) {
-        return variable;
-    }
-    return void 0;
+export function returnBooleanOrNothing(variable: unknown) {
+  if (isBoolean(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is a number, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnNumberOrNothing(variable: any): number {
-    if (isNumber(variable)) {
-        return variable;
-    }
-    return void 0;
+export function returnNumberOrNothing(variable: unknown) {
+  if (isNumber(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is an array, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnArrayOrNothing<Context>(variable: Context): Context {
-    if (isArray(variable)) {
-        return variable;
-    }
-    return void 0;
+export function returnArrayOrNothing<Context>(variable: Context) {
+  if (isArray(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is null, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnNullOrNothing(variable: any): null {
-    if (isNull(variable)) {
-        return variable;
-    }
-    return void 0;
+export function returnNullOrNothing(variable: unknown) {
+  if (isNull(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is a big int, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnBigIntOrNothing(variable: any): bigint {
-    if (isBigInt(variable)) {
-        return variable;
-    }
-    return void 0;
+export function returnBigIntOrNothing(variable: unknown) {
+  if (isBigInt(variable)) return variable
 }
 
 /**
  * Provide an variable as an argument. If the variable is a symbol, it
  * will be returned. If it is not, undefined is returned.
- * @param variable 
+ * @param variable
  */
-export function returnSymbolOrNothing<Context>(variable: Context): Context {
-    if (isSymbol(variable)) {
-        return variable;
-    }
-    return void 0;
+export function returnSymbolOrNothing<Context>(variable: Context) {
+  if (isSymbol(variable)) return variable
 }
